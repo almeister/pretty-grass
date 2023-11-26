@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  [SerializeField, Range(0, 100)] float movementSpeed = 5f;
+  [SerializeField] CinemachineVirtualCamera virtualCamera;
 
-  public Transform head;
+  [SerializeField, Range(0, 100)] float movementSpeed = 5f;
 
   void Update()
   {
@@ -17,5 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 movement = new Vector3(xAxis, 0, zAxis);
     transform.Translate(movementSpeed * Time.deltaTime * movement);
+
+    transform.eulerAngles = new Vector3(0, virtualCamera.transform.eulerAngles.y, 0);
   }
 }

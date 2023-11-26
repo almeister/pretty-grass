@@ -34,7 +34,7 @@ MonoBehaviour:
   rangeR: 0
   rangeG: 0
   rangeB: 0
-  AdjustedColor: {r: 1, g: 0.9372133, b: 0.042452812, a: 1}
+  AdjustedColor: {r: 1, g: 0.8805541, b: 0.043137252, a: 1}
   paintBlockMask:
     serializedVersion: 2
     m_Bits: 0
